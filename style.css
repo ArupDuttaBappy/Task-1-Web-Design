@@ -185,7 +185,7 @@ img{
 	align-items: start;
 	justify-content: center;
 	box-shadow: var(--shadow);
-	animation: slider 9s infinite linear;
+	animation: slider 5s infinite linear;
 }
 
 @keyframes slider{
