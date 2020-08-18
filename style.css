@@ -23,10 +23,53 @@ html{
 	color: var(--dark);
 }
 body{
-	background:#4E5266;
-	margin:30px 140px;
+	background:#575B72;
+	margin:;
 	line-height: 1.4;
 }
+.wrapper1{
+	margin: 30px 140px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+
+}
+.page-wrapper1{
+	margin-bottom: 0px;
+	padding-bottom: -160px;
+
+	background: #4E5266;
+
+}
+
+.wrapper2{
+	
+	background: #fff;
+	margin-left:140px;
+	margin-right: 140px;
+	margin-top: -20px;
+	margin-bottom: -20px;
+
+	
+}
+.page-wrapper2{
+	
+	background: #575B72;
+
+}
+
+.wrapper3{
+	margin: 0px 140px;
+	
+
+}
+.page-wrapper3{
+
+	background: #4E5266;
+	
+
+}
+
+
 
 
 .ab{
