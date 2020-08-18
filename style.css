@@ -132,57 +132,59 @@ img{
 
 
 
-
-
-
 /*Top Container*/
 
 .top-container{
 	display: grid;
+	height: 600px;
 	grid-gap: 0px;
 	grid-template-areas: 
-	'top-box-a showcase showcase'
-	'top-box-b showcase showcase';
+	'top-box-a intro'
+	'top-box-b intro';
 
 }
 
-/*Showcase*/
+/*intro*/
 
-.showcase{
-	grid-area: showcase;
-	min-height: 400px;
-	background-image: url(img/pic01.jpg);
+.intro{
+	grid-area: intro;
+	min-width: 430px;
+	min-height: 470px;
 	background-size:cover;
 	background-position: left;
-	padding:10rem;
-	display: flex;
+	padding:;
 	flex-direction: column;
 	align-items: start;
 	justify-content: center;
-	box-shadow: var(--shadow);
-	animation: slider 12s infinite linear;
 }
 
-@keyframes slider{
-	0%{background-image: url('img/pic01.jpg');}
-	30%{background-image: url('img/pic02.jpg');}
-	70%{background-image: url('img/pic03.jpg');}
-}
-
-
-.showcase h1{
-	font-size: 4rem;
-	margin-bottom: 0;
-	color: var(--light);
-
-}
-
-.showcase p{
-	font-size: 1.3rem;
-	margin-bottom: 0;
-	color: var(--light);
+.intro2{
 	
+	height: 100%;
+	width: 100%;
+
+	align-items: center;
+    text-align: center;
+
+	position: relative;
+    display: flex;
+    justify-content: center;
 }
+.intro-slideshow img {
+	position: absolute;
+	top: 0;
+    right: 0;
+	width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    z-index:999;
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
+
+}
+
+
+
 
 .top-box{
 	background: ;
@@ -196,7 +198,7 @@ img{
 
 .top-box h2{
 	color:#EFF9F6;
-	font-weight: 500;
+	font-weight: 400;
 
 }
 
