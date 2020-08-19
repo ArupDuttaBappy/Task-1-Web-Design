@@ -928,7 +928,9 @@ font-family: 'Raleway', sans-serif;
 	text-decoration: none;
 	color:#C1C3CA;
 }
-
+.div-end{
+	text-align: center;
+}
 
 
 /* Media Queries */
