@@ -269,7 +269,7 @@ ul{
 	position: fixed;
 	right: 0;
 	top: 0;
-	visibility: visible;
+	visibility: hidden;
 	width: 22em;
 	z-index: 10002;
 	padding:45px; 
