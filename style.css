@@ -556,7 +556,7 @@ font-family: 'Raleway', sans-serif;
   display: inline-block;
   border-radius: 80px;
   box-shadow: 0px 0px 2px #888;
-  padding: 1em 1em;
+  padding: 1.5em 1.5em;
   border-style: solid;
   border-width: 0.8px;
   border-color: #D4D6D9;
@@ -780,7 +780,7 @@ font-family: 'Raleway', sans-serif;
 
 .container-p , .container-r{
 
-	padding-top:  20px;
+	padding:  50px;
 }
 
 .container h2{
@@ -851,13 +851,22 @@ font-family: 'Raleway', sans-serif;
 	
 }
 #input{
-	padding: 20px;
-	padding-left: px;
+	border-style: none;
+	padding: ;
+	padding-left: 10px;
+	padding-bottom: 2.5px;
+	padding-left: ;
     margin-right: -30px;
 	border-style: none;
 	border-radius: 20px;
-	height: 37px;
+	height: 39px;
 	width: 50%;
+
+}
+
+input:focus{
+	outline: none;
+
 }
 
 .bottom-box{
@@ -867,9 +876,12 @@ font-family: 'Raleway', sans-serif;
 
 .bottom{
 	background-color: #4E5266;
-
+}
+#input placeholder{
 
 }
+
+
 .bottom h3{
 	color: #FFFFFF;
 }
@@ -882,7 +894,8 @@ font-family: 'Raleway', sans-serif;
 
 .bottom-box{
 
-	padding: 30px;
+	padding: 60px;
+	padding-bottom: 30px;
 	background-color: #4E5266;
 	display: grid;
 	grid-gap: 0px;
@@ -900,7 +913,8 @@ border-width: 0.3px;
 border-color: #7A7D8C;
 }
 
-.boxes .box{
+.boxes .box .bottom{
+	padding-left-right: 50px;
 }
 .at-last  {
 	border-style: solid;
@@ -927,9 +941,12 @@ font-family: 'Raleway', sans-serif;
 .foot a{
 	text-decoration: none;
 	color:#C1C3CA;
+	padding-left: 60px;
+	padding-right: 0px;
 }
 .div-end{
 	text-align: center;
+	padding: 18px;
 }
 
 
