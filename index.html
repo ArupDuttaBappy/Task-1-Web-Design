@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible"
   content="ie=edge">
+  	<title>ResponSive Altitude</title>
+
 
   <link rel="stylesheet" type="text/css" href="style.css">
   
-  <script type="text/javascript" src="script.js" defer></script>
   <script type="https://pixelarity.com/text/javascript" src="script.js" defer></script>
   <script src="https://pixelarity.com//items/demos_assets/jquery.min.js"></script>
   <script src="https://pixelarity.com//items/demos_assets/browser.min.js"></script>
@@ -16,8 +17,6 @@
   <script src="https://pixelarity.com/assets/js/util.js"></script>
   <script src="https://kit.fontawesome.com/9e3b8f94c4.js" crossorigin="anonymous"></script>
 
-
-	<title>ResponSive</title>
 </head>
 <body>
 
@@ -32,7 +31,7 @@
 				<nav>
 					<ul>
 						<li>
-							<a href="#menu">Menu</a>
+							<a href="#">Menu</a>
 						</li>
 					</ul>
 				</nav>
@@ -74,8 +73,15 @@
 	</div>
 
 
+
+
+
+
+
 	<div class="wrapper">
 		<div class="inner">
+
+
 			<section class="main">
 				<header class="major">
 					<h2>Lorem ipsum dolor</h2>
@@ -83,22 +89,24 @@
 				</header>
 				<div class="features">
 					<section>
-						<span class="fas fa-camera fa-2x"></span>
+						<span class="icon solid fas fa-camera major accent1"></span>
 						<h3>Ultrices aliquam</h3>
 						<p>Lorem ipsum dolor sit amet nullam feugiat tempus</p>
 					</section>
 					<section>
-						<span class="fas fa-paper-plane fa-2x"></span>
+						<span class="icon solid fas fa-paper-plane major accent2"></span>
 						<h3>Lorem sed nullam</h3>
 						<p>Lorem ipsum dolor sit amet nullam feugiat tempus</p>
 					</section>
 					<section>
-						<span class="fas fa-envelope fa-2x"></span>
+						<span class="icon solid fas fa-envelope major accent3"></span>
 						<h3>Aliquam feugiat</h3>
 						<p>Lorem ipsum dolor sit amet nullam feugiat tempus</p>
 					</section>
 				</div>
 			</section>
+
+
 			<section class="carousel accent4">
 				<article class="visible" style="">
 					<div class="image">
@@ -128,17 +136,20 @@
 					</div>
 				</article>
 				<nav>
-					<a href="#" class="previous"><span class="label">Previous</span></a>
+					<a  href="#" class="previous"><span class="label">Previous</span></a>
 					<a href="#" class="next"><span class="label">Next</span></a>
 				</nav>
 			</section>
+
+
 			<section class="main">
 				<header class="major">
 					<h2>Sed tempus aliquam</h2>
 					<p>Lorem ipsum dolor sit amet</p>
 				</header>
 				<div class="spotlights">
-					<article><div class="image">
+					<article>
+						<div class="image">
 						<img src="img/pic07.jpg" alt="" data-position="center">
 					</div>
 					<div class="content">
@@ -165,8 +176,16 @@
 				</article>
 			</div>
 		</section>
+
+
+
 	</div>
 </div>
+
+
+
+
+
 
 
 <div class="wrapper">
@@ -233,7 +252,7 @@
 				<li class="icon solid fa-phone"><a href="#">(000) 000-0000</a></li>
 				<li class="icon solid fa-envelope"><a href="#">info@untitled.tld</a></li>
 			</ul>
-			<p class="copyright">© Untitled. All rights reserved.</p>
+			<p class="copyright">&#169; Untitled. All rights reserved.</p>
 		</footer>
 	</div>
 </div>
@@ -241,8 +260,149 @@
 
 
 <script>
-var settings = {slider: {speed: 1500,delay: 4000},carousel: {speed: 350}};(function($) {var $window = $(window),$body = $('body');$.fn._slider = function(options) {var $window = $(window),$this = $(this);if (this.length == 0)return $this;if (this.length > 1) {for (var i=0; i < this.length; i++)$(this[i])._slider(options);return $this;}var current = 0, pos = 0, lastPos = 0,slides = [],$slides = $this.children('article'),intervalId,isLocked = false,i = 0;$this._switchTo = function(x, stop) {if (isLocked || pos == x)return;isLocked = true;if (stop)window.clearInterval(intervalId);lastPos = pos;pos = x;slides[lastPos].removeClass('top');slides[pos].addClass('visible').addClass('top');window.setTimeout(function() {slides[lastPos].addClass('instant').removeClass('visible');window.setTimeout(function() {slides[lastPos].removeClass('instant');isLocked = false;}, 100);}, options.speed);};$slides.each(function() {var $slide = $(this);slides.push($slide);i++;});slides[pos].addClass('visible').addClass('top');if (slides.length == 1)return;intervalId = window.setInterval(function() {current++;if (current >= slides.length)current = 0;$this._switchTo(current);}, options.delay);};$.fn._carousel = function(options) {var $window = $(window),$this = $(this);if (this.length == 0)return $this;if (this.length > 1) {for (var i=0; i < this.length; i++)$(this[i])._slider(options);return $this;}var current = 0, pos = 0, lastPos = 0,slides = [],$slides = $this.children('article'),intervalId,isLocked = false,i = 0;$this._switchTo = function(x, stop) {if (isLocked || pos == x)return;isLocked = true;if (stop)window.clearInterval(intervalId);lastPos = pos;pos = x;slides[lastPos].removeClass('visible');window.setTimeout(function() {slides[lastPos].hide();slides[pos].show();window.setTimeout(function() {slides[pos].addClass('visible');}, 25);window.setTimeout(function() {isLocked = false;}, options.speed);}, options.speed);};$slides.each(function() {var $slide = $(this);slides.push($slide);$slide.hide();i++;});$this.on('click', '.next', function(event) {event.preventDefault();event.stopPropagation();current++;if (current >= slides.length)current = 0;$this._switchTo(current);}).on('click', '.previous', function(event) {event.preventDefault();event.stopPropagation();current--;if (current < 0)current = slides.length - 1;$this._switchTo(current);});slides[pos].show().addClass('visible');if (slides.length == 1)return;};breakpoints({xlarge: [ '1281px', '1680px' ],large: [ '981px', '1280px' ],medium: [ '737px', '980px' ],small: [ '481px', '736px' ],xsmall: [ '361px', '480px' ],xxsmall: [ null, '360px' ]});$window.on('load', function() {window.setTimeout(function() {$body.removeClass('is-preload');}, 100);});if (!browser.canUse('object-fit'))$('img[data-position]').each(function() {var $this = $(this),$parent = $this.parent();$parent.css('background-image', 'url("' + $this.attr('src') + '")').css('background-size', 'cover').css('background-repeat', 'no-repeat').css('background-position', $this.data('position'));$this.css('opacity', '0');});$('.slider')._slider(settings.slider);$('.carousel')._carousel(settings.carousel);$('#menu').append('<a href="#menu" class="close"></a>').appendTo($body).panel({delay: 500,hideOnClick: true,hideOnSwipe: true,resetScroll: true,resetForms: true,target: $body,visibleClass: 'is-menu-visible',side: 'right'});})(jQuery);
-</script>
+  var settings = {
+    slider: {
+      speed: 1500,
+      delay: 4000
+    },
+    carousel: {
+      speed: 350
+    }
+  };
+(function($) {
+  var $window = $(window),
+    $body = $('body');
+  $.fn._slider = function(options) {
+    var $window = $(window),
+      $this = $(this);
+    if (this.length == 0) return $this;
+    if (this.length > 1) {
+      for (var i = 0; i < this.length; i++) $(this[i])._slider(options);
+      return $this;
+    }
+    var current = 0,
+      pos = 0,
+      lastPos = 0,
+      slides = [],
+      $slides = $this.children('article'),
+      intervalId, isLocked = false,
+      i = 0;
+    $this._switchTo = function(x, stop) {
+      if (isLocked || pos == x) return;
+      isLocked = true;
+      if (stop) window.clearInterval(intervalId);
+      lastPos = pos;
+      pos = x;
+      slides[lastPos].removeClass('top');
+      slides[pos].addClass('visible').addClass('top');
+      window.setTimeout(function() {
+        slides[lastPos].addClass('instant').removeClass('visible');
+        window.setTimeout(function() {
+          slides[lastPos].removeClass('instant');
+          isLocked = false;
+        }, 100);
+      }, options.speed);
+    };
+    $slides.each(function() {
+      var $slide = $(this);
+      slides.push($slide);
+      i++;
+    });
+    slides[pos].addClass('visible').addClass('top');
+    if (slides.length == 1) return;
+    intervalId = window.setInterval(function() {
+      current++;
+      if (current >= slides.length) current = 0;
+      $this._switchTo(current);
+    }, options.delay);
+  };
+  $.fn._carousel = function(options) {
+    var $window = $(window),
+      $this = $(this);
+    if (this.length == 0) return $this;
+    if (this.length > 1) {
+      for (var i = 0; i < this.length; i++) $(this[i])._slider(options);
+      return $this;
+    }
+    var current = 0,
+      pos = 0,
+      lastPos = 0,
+      slides = [],
+      $slides = $this.children('article'),
+      intervalId, isLocked = false,
+      i = 0;
+    $this._switchTo = function(x, stop) {
+      if (isLocked || pos == x) return;
+      isLocked = true;
+      if (stop) window.clearInterval(intervalId);
+      lastPos = pos;
+      pos = x;
+      slides[lastPos].removeClass('visible');
+      window.setTimeout(function() {
+        slides[lastPos].hide();
+        slides[pos].show();
+        window.setTimeout(function() {
+          slides[pos].addClass('visible');
+        }, 25);
+        window.setTimeout(function() {
+          isLocked = false;
+        }, options.speed);
+      }, options.speed);
+    };
+    $slides.each(function() {
+      var $slide = $(this);
+      slides.push($slide);
+      $slide.hide();
+      i++;
+    });
+    $this.on('click', '.next', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      current++;
+      if (current >= slides.length) current = 0;
+      $this._switchTo(current);
+    }).on('click', '.previous', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      current--;
+      if (current < 0) current = slides.length - 1;
+      $this._switchTo(current);
+    });
+    slides[pos].show().addClass('visible');
+    if (slides.length == 1) return;
+  };
+  breakpoints({
+    xlarge: ['1281px', '1680px'],
+    large: ['981px', '1280px'],
+    medium: ['737px', '980px'],
+    small: ['481px', '736px'],
+    xsmall: ['361px', '480px'],
+    xxsmall: [null, '360px']
+  });
+  $window.on('load', function() {
+    window.setTimeout(function() {
+      $body.removeClass('is-preload');
+    }, 100);
+  });
+  if (!browser.canUse('object-fit')) $('img[data-position]').each(function() {
+    var $this = $(this),
+      $parent = $this.parent();
+    $parent.css('background-image', 'url("' + $this.attr('src') + '")').css('background-size', 'cover').css('background-repeat', 'no-repeat').css('background-position', $this.data('position'));
+    $this.css('opacity', '0');
+  });
+  $('.slider')._slider(settings.slider);
+  $('.carousel')._carousel(settings.carousel);
+  $('#menu').append('<a href="#menu" class="close"></a>').appendTo($body).panel({
+    delay: 500,
+    hideOnClick: true,
+    hideOnSwipe: true,
+    resetScroll: true,
+    resetForms: true,
+    target: $body,
+    visibleClass: 'is-menu-visible',
+    side: 'right'
+  });
+})(jQuery); </script>
 
 
 </body>
