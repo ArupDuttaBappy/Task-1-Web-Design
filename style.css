@@ -389,20 +389,36 @@ form{
 
 
 
+
 /*   footer   */
 
-ul{
+ #footer ul{
 	list-style-type: none;
+	padding-left: 0px;
 }
 
+#footer a{
+	color: #C5C6CC;
+}
 
 #footer .foo-div li{
-    padding:10px;
+    padding:0px 16px 15px 10px;
+    font-size: 14px;
+    font-weight: 400;
    
 }
 
 #footer .foo-div li a{
-	 color: #BDCBBB;
+	 color: #C5C6CC;
+}
+
+#footer #footer-first .foo-div h3{
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	transform:  scaleY(0.9);
+	text-transform: uppercase;
+	padding-bottom: 20px;
 }
 
 #footer{
@@ -410,20 +426,26 @@ ul{
 	background-color: #4E5266;
 }
 
+  #footer .foo-div:not(:last-child) {
+	        border-right:1px solid #6D7081;
+}
 
+
+#footer #first-flex{
+border-right:1px solid #6D7081;
+}
+
+li:nth-child(1) { }
 @media screen and (max-width: 992px) {
-  #footer .foo-div:not(:last-child) {
-	  
-      border-right:0px solid white;
-      border-bottom:1px solid white;
-}}
 
-@media screen and (min-width: 992px) {
-  #footer .foo-div:not(:last-child) {
-	  
-      border-right:1px solid white;
-      border-bottom:0px solid white;
-}}
+#footer #first-flex:not(:last-child){
+border-right:0px solid #6D7081;
+
+}
+#footer #first-flex{
+border-bottom: 1px solid #6D7081;
+}
+}
 
 
 /*    footer  end   */
@@ -434,10 +456,12 @@ ul{
 #footer .contact-icons li:before {
   color: #ffffff;
   font-size: 0.85em;
+  padding-right: 10px;
 }
 
-#footer-second li{
+#footer #footer-second li{
 	padding: 25px;
+	
 
 }
 #footer-second li:not(:last-child) {
