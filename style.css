@@ -2,23 +2,147 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,500,600");
 
 body{
-	background-color:#575B72;
+	
+	background-color: #4E5266;
+}
+
+body, input, select, textarea {
+  font-family: "Raleway", sans-serif;
 }
 
 #wrapper{
-		background-color:#575B72;
+		background-color:#4E5266;
+}
+
+@media screen and (max-width: 736) {
+	#wrapper{
+	padding-left: 10px;
+	padding-right: 10px;
+	}
+}
+
+
+#navbar-sec{
+	padding:50px 0px 35px 0px;
+	margin:4px;
 
 }
 
-.navbar-brand{
-	font-weight: 600;
+#navbar-sec .navbar-brand{
+	font-weight: 400;
+	letter-spacing: 0.05em;
+	transform: scaleY(0.9);
+	padding-right: 10px;
 }
+
+.navbar #nav-span{
+	font-weight: 500;
+	font-size: 15px;
+	color: #A7A9B3;
+	letter-spacing: 0.09em;
+	border-left-style: solid;
+	border-left-color: #A7A9B3;
+	border-left-width: 1px; 
+	padding-left: 10px;
+	vertical-align: middle;
+
+}
+
+
+.navbar .navbar-toggler{
+	color: #fff;
+	border-style: none;
+	font-weight: 500;
+	font-size: 15px;
+	vertical-align: middle;
+	letter-spacing: 0.05em;
+	padding-right: 10px;
+}
+
+
+#banner #banner-first #banner-div1 h1, #banner #banner-first #banner-div2 h1{
+	font-size: 26px;
+}
+
+#banner #banner-first #banner-div1 p,#banner #banner-first #banner-div2 p{
+	font-size: 15px;
+	font-weight: 300px;
+	color: #BDE0D5;
+}
+
+
+#banner #banner-first  #banner-div1 .btn, #banner #banner-first  #banner-div2 .btn{
+	border-radius: 30px;
+	padding:10px 22px 10px 22px;
+	font-size: 12px;
+	font-weight: 500;
+	color: #fff;
+
+}
+
+
+/*   slider  */
+#banner #demo .carousel-inner .carousel-item img {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+  }
+
+#banner #banner-div1,#banner #banner-div2{
+	padding:3.5em 2.5em 3.5em 2.5em;
+	color: #fff;
+	min-height: 300px;
+}
+#banner #banner-div1{
+	background-color: #4cabb1;
+}
+
+#banner #banner-div2{
+background-color: #69c7ad;
+}
+
+
+#banner #banner-div1 h1,#banner #banner-div2 h1{
+	font-size: 1.75em;
+	font-weight: 500;
+    margin: 0 0 0.65em 0;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+#banner #banner-div1 p,#banner #banner-div2 p{
+margin: 0 0 2em 0;
+}
+
+
+/*  slider  end  */
+
+
+
+
 
 /*  icon section  */
 
 .col-lg-4{
-	padding: 50px;
-	line-height: 2.5em;
+	padding: 30px;
+	line-height: 1.5em;
+}
+
+
+#rowclass .col-lg-4 h5{
+	font-size: 15px;
+	transform: scaleY(.9);
+	font-weight: 600;
+	letter-spacing: 0.1em;
+
+}
+
+#rowclass .col-lg-4 p{
+color: #9B9FA5;
+font-weight: 200;
+padding-top: 4px;
 }
 
 .row{
@@ -95,6 +219,7 @@ body{
 /*  carousel */
 
 #carouselExampleCaptions{
+
 	padding:60px 110px 60px 110px; 
 	background-color: #FED586;
 }
@@ -104,7 +229,217 @@ body{
   width: 50px;
 }
 
+.carousel-item{
+	  transition: ;
+
+}
+
+@media screen and (max-width: 736px) {
+
+
+#carouselExampleCaptions{
+	padding:10px 0px 10px 0px; 
+	background-color: #FED586;
+}
+
+ #carouselExampleCaptions .container .carousel-inner {
+    padding: 1.5em;
+  }
+ #carouselExampleCaptions .container .carousel-inner .carousel-item { 
+    transform: translateY(0);
+    display: block !important;
+    margin: 1.5em 0 0 0;
+    opacity: 1;
+    visibility: visible;
+  }
+ #carouselExampleCaptions .container .carousel-inner .carousel-item:first-child {
+    margin-top: 0;
+  }
+ #carouselExampleCaptions .container .carousel-inner .carousel-item .img {
+    height: 11em;
+  }
+  #carouselExampleCaptions .container .carousel-inner .carousel-item .content {
+    padding: 2em 2em 2em 2em;
+  }
+  #carouselExampleCaptions .carousel-control-prev .carousel-control-prev-icon{
+    display: none;
+  }
+  #carouselExampleCaptions .carousel-control-next .carousel-control-next-icon{
+    display: none;
+  }
+}
+
+
+#carouselExampleCaptions .container .carousel-inner .carousel-item .d-md-block h5{
+font-size: 15px;
+font-weight: 600;
+}
+
+#carouselExampleCaptions .container .carousel-inner .carousel-item .d-md-block p{
+color:#9B9FA5;
+font-size: 15px;
+font-weight: 200;
+}
+
+
 /*  carousel  end  */
 
 
 
+/*  division 4  */
+
+#div-4-container{
+	background-color: #fff;
+}
+.det-class{
+  box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.1);
+  padding:0px; 
+  margin:0px;
+}
+
+.det-class-img{
+  padding:0px; 
+  margin:0px;
+}
+.det-rows{
+	padding:0;
+	margin:0; 
+}
+
+
+#div-4-container .text-center h2{
+	font-size: 26px;
+	font-weight: 400;
+	word-spacing: 0.1em;
+	letter-spacing: 0.08em;
+
+}
+
+#div-4-container h5{
+	font-size: 17px;
+	font-weight: 600;
+	word-spacing: 0.1em;
+	letter-spacing: 0.06em;
+
+}
+#div-4-container p{
+	color:#9B9FA5;
+	font-weight: 200;
+	font-size: 14px;
+}
+
+
+#div-4-container .btn{
+    background-color:#575B72;
+    border-radius: 30px;
+	padding:10px 22px 10px 22px;
+	font-size: 12px;
+	font-weight: 500;
+	color: #fff;
+}
+
+/*   division 4 end  */
+
+
+
+/*  email section  */
+
+#email-container{
+	background-color: #4CABB1;
+	color: #fff;
+}
+
+#email-container h3{
+	transform: scaleY(0.9);
+	letter-spacing: 0.06em;
+	
+}
+#email-container p{
+color: #97D3CE;	
+}
+
+#email-container #email-btn{
+	font-size: 13px;
+	font-weight: 600px;
+}
+
+
+#email{
+	width: 40%;
+	margin-right: -20px;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border:;
+}
+form{
+	padding-bottom:80px;
+}
+
+
+#email-btn{
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	background-color: #5AB7BD;
+	border-color: #5AB7BD;
+	border-width: 4px;
+}
+/*  email sec end  */
+
+
+
+/*   footer   */
+
+ul{
+	list-style-type: none;
+}
+
+
+#footer .foo-div li{
+    padding:10px;
+   
+}
+
+#footer .foo-div li a{
+	 color: #BDCBBB;
+}
+
+#footer{
+	color: #fff;
+	background-color: #4E5266;
+}
+
+
+@media screen and (max-width: 992px) {
+  #footer .foo-div:not(:last-child) {
+	  
+      border-right:0px solid white;
+      border-bottom:1px solid white;
+}}
+
+@media screen and (min-width: 992px) {
+  #footer .foo-div:not(:last-child) {
+	  
+      border-right:1px solid white;
+      border-bottom:0px solid white;
+}}
+
+
+/*    footer  end   */
+
+
+
+
+#footer .contact-icons li:before {
+  color: #ffffff;
+  font-size: 0.85em;
+}
+
+#footer-second li{
+	padding: 25px;
+
+}
+#footer-second li:not(:last-child) {
+	padding-right: ;
+}
