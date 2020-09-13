@@ -13,12 +13,12 @@
 
 <div class="container" style="margin-left:30%">
 	<h2>Multi-select boxe (pillbox)</h2>
-	
+
 	<div class="select-box">
-		
+
 
 		<div class="options-container">
-			
+
 			<div class="option">
 				<input type="radio" class="radio" id="automobiles" name="categories">
 				<label for="automobiles">Automobiles</label>
@@ -42,7 +42,7 @@
 
 		</div>
 		<div class="selected">
-        
+
    	</div>
 
    	<div class="search-box">
@@ -52,10 +52,77 @@
 
 
 	</div>
-	
+
 </div>
 
+<!-- from sabbir -->
+<style media="screen">
 
+    .search-box-container{
+        position:relative;
+    }
+
+    .search-box-container input{
+        width: 300px;
+    }
+
+    .option-list{
+        list-style-type: none;
+        padding-left: unset;
+        display: none;
+        position: absolute;
+        top: 30px;
+        width: 300px;
+    }
+
+    .search-box-container.active .option-list{
+        display: block;
+        box-shadow: 0px 0px 10px 0px #cecbcb;
+    }
+
+    .search-box-container.active input{
+        display: block;
+        box-shadow: 0px 0px 10px 0px #cecbcb;
+    }
+
+    .option-list li{
+        padding: 5px 0px;
+    }
+
+    .option-list li:hover{
+        background-color: gray;
+    }
+</style>
+<div class="search-box-container" >
+    <input class="input-select" type="text" name="" value="">
+    <ul class="option-list" style="">
+        <li>hi</li>
+        <li>hello</li>
+        <li>hello world</li>
+        <li>hey</li>
+    </ul>
+</div>
+<script type="text/javascript">
+    window.addEventListener('click',function(event){
+        if(event.target.matches('.input-select'))
+        {
+            var parent = event.target.parentNode;
+            if(!parent.classList.contains('active'))
+            {
+                parent.classList.add('active');
+            }
+        }
+        else {
+            var option_list = document.querySelectorAll('.search-box-container').forEach((item, i) => {
+                if(item.classList.contains('active'))
+                {
+                    item.classList.remove('active');
+                }
+            });
+
+        }
+    })
+</script>
 
 <script type="text/javascript" src="main2.js"></script>
 </body>
