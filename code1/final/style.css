@@ -1,0 +1,33 @@
+    .search-box-container{
+        position:relative;
+    }
+
+    .search-box-container input{
+        width: 300px;
+    }
+
+    .option-list{
+        list-style-type: none;
+        padding-left: unset;
+        display: none;
+        position: absolute;
+        top: 30px;
+        width: 300px;
+    }
+
+    .search-box-container.active .option-list{
+        display: block;
+        box-shadow: 0px 0px 10px 0px #cecbcb;
+    }
+
+    .search-box-container.active input{
+        box-shadow: 0px 0px 10px 0px #cecbcb;
+    }
+
+    .option-list li{
+        padding: 5px 0px;
+    }
+
+    .option-list li:hover{
+        background-color: gray;
+    }
