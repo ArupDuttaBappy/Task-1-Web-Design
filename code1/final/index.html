@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multi Select</title>
 </head>
@@ -13,7 +12,7 @@
 <style media="screen">
 
     .search-box-container{
-        position:relative;
+        position:center;
     }
 
     .search-box-container input{
@@ -91,11 +90,15 @@
 
 //select option and add to the box
 function getPaging(str) {
-  var tester=document.getElementById("input-select-text").innerHTML;
+  var tester=(document.getElementById("input-select-text").value);
+
   var arr1=tester.split(',');
   arr1.pop();
-  document.getElementById("input-select-text").value = arr1.toString();
+  
+  document.getElementById("input-select-text").value = arr1.toString()+",";
   document.getElementById("input-select-text").value += document.getElementById(str).innerText+ " ,";
+
+  filterList("");
 
 }
 
