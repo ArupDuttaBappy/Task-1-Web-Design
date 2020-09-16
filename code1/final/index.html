@@ -12,17 +12,15 @@
 <style media="screen">
 
     .search-box-container{
-        position:center;
+        position:relative;
+        margin-top: 20%;
+        margin-left: 30%;
+
     }
 
     .search-box-container input{
         width: 400px;
         height: 30px
-    }
-
-    #input-select-text{
-      font-style: 
-
     }
 
     .option-list{
@@ -31,7 +29,7 @@
         display: none;
         position: absolute;
         top: 30px;
-        width: 300px;
+        width: 400px;
     }
 
     .search-box-container.active .option-list{
@@ -45,9 +43,12 @@
     }
 
     .option-list li{
-        padding: 5px 0px;
+        padding: 15px 0px;
     }
 
+    .listing.selected{
+        background-color: green;
+    }
     .option-list li:hover{
         background-color: gray;
     }
@@ -90,6 +91,15 @@
 
 //select option and add to the box
 function getPaging(str) {
+  if(!event.target.classList.contains('selected'))
+            {
+                event.target.classList.add('selected');
+            }
+  else{
+    event.target.classList.remove('selected');
+return;
+  }
+
   var tester=(document.getElementById("input-select-text").value);
 
   var arr1=tester.split(',');
