@@ -2,32 +2,125 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multi Select</title>
 </head>
 <body>
   
-<div class="container-fluid h-100 bg-light text-dark">
-  <div class="row justify-content-center align-items-center">
-    <h1>Select Multilpe</h1>    
-  </div>
-  <br>
-  <div class="row justify-content-center align-items-center h-100">
-    <div class="search-box-container" >
-      <input class="input-select" type="text" name="" value="">
-        <ul class="option-list" style="">
-          <li>hi</li>
-          <li>hello</li>
-          <li>hello world</li>
-          <li>hey</li>
-        </ul>
-    </div>
-  </div>
-</div>
 
-<script type="text/javascript" src="main.js"></script>
+<!-- from sabbir -->
+<style media="screen">
+
+    .search-box-container{
+        position:relative;
+    }
+
+    .search-box-container input{
+        width: 400px;
+        height: 30px
+    }
+
+    #input-select-text{
+      font-style: 
+
+    }
+
+    .option-list{
+        list-style-type: none;
+        padding-left: unset;
+        display: none;
+        position: absolute;
+        top: 30px;
+        width: 300px;
+    }
+
+    .search-box-container.active .option-list{
+        display: block;
+        box-shadow: 0px 0px 10px 0px #cecbcb;
+    }
+
+    .search-box-container.active input{
+        display: block;
+        box-shadow: 0px 0px 10px 0px #cecbcb;
+    }
+
+    .option-list li{
+        padding: 5px 0px;
+    }
+
+    .option-list li:hover{
+        background-color: gray;
+    }
+</style>
+<div class="search-box-container">
+    <input class="input-select" id="input-select-text" type="text" name="" value="">
+    <ul class="option-list" style="">
+        <li id="1" onclick="getPaging(this.id)" class="listing" >hi</li>
+        <li id="2" onclick="getPaging(this.id)" class="listing" >hello</li>
+        <li id="3" onclick="getPaging(this.id)" class="listing" >hello world</li>
+        <li id="4" onclick="getPaging(this.id)" class="listing" >hey</li>
+    </ul>
+</div>
+<script type="text/javascript">
+
+    window.addEventListener('click',function(event){
+        if(event.target.matches('.input-select'))
+        {
+            var parent = event.target.parentNode;
+            if(!parent.classList.contains('active'))
+            {
+                parent.classList.add('active');
+            }
+            else{
+              parent.classList.remove('active');
+            }
+        }
+
+        else {
+            var option_list = document.querySelectorAll('.search-box-container').forEach((item, i) => {
+                if(item.classList.contains('active'))
+                {
+                    item.classList.remove('active');
+                }
+            });
+
+        }
+    })
+
+
+//select option and add to the box
+function getPaging(str) {
+  var tester=document.getElementById("input-select-text").innerHTML;
+  var arr1=tester.split(',');
+  arr1.pop();
+  document.getElementById("input-select-text").value = arr1.toString();
+  document.getElementById("input-select-text").value += document.getElementById(str).innerText+ " ,";
+
+}
+
+document.getElementById("input-select-text").addEventListener("keyup", function (e) {
+    var x=e.target.value
+    var arr = x.split(',');
+
+    filterList(arr[arr.length - 1]);
+  });
+
+var label = document.querySelectorAll(".listing");
+
+const filterList = (searchTerm) => {
+    searchTerm = searchTerm.toLowerCase();
+   label.forEach((option) => {
+    let la=option.innerText.toLowerCase();
+   if (la.indexOf(searchTerm) != -1) {
+        option.style.display = "block";
+      } else {
+        option.style.display = "none";
+      }
+    });
+  };
+
+</script>
 
 </body>
 </html>
