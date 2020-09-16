@@ -11,6 +11,8 @@
 <!-- from sabbir -->
 <style media="screen">
 
+
+
     .search-box-container{
         position:relative;
         margin-top: 20%;
@@ -30,6 +32,9 @@
         position: absolute;
         top: 30px;
         width: 400px;
+        border-style: solid;
+        border-color: black;
+        
     }
 
     .search-box-container.active .option-list{
@@ -41,9 +46,12 @@
         display: block;
         box-shadow: 0px 0px 10px 0px #cecbcb;
     }
+    .search-box-container input{
+        font-size: 18px;
+    }
 
     .option-list li{
-        padding: 15px 0px;
+        padding: 10px;
     }
 
     .listing.selected{
@@ -97,7 +105,9 @@ function getPaging(str) {
             }
   else{
     event.target.classList.remove('selected');
-return;
+    
+
+    return;
   }
 
   var tester=(document.getElementById("input-select-text").value);
