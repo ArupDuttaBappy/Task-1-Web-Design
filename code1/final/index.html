@@ -40,6 +40,9 @@
     .search-box-container.active .option-list{
         display: block;
         box-shadow: 0px 0px 10px 0px #cecbcb;
+        max-height: 240px;
+        opacity: 1;
+  overflow-y: scroll;
     }
 
     .search-box-container.active input{
@@ -64,10 +67,14 @@
 <div class="search-box-container">
     <input class="input-select" id="input-select-text" type="text" name="" value="">
     <ul class="option-list" style="">
-        <li id="1" onclick="getPaging(this.id)" class="listing" >hi</li>
+        <li id="1" onclick="getPaging(this.id)" class="listing" >hi there</li>
         <li id="2" onclick="getPaging(this.id)" class="listing" >hello</li>
-        <li id="3" onclick="getPaging(this.id)" class="listing" >hello world</li>
-        <li id="4" onclick="getPaging(this.id)" class="listing" >hey</li>
+        <li id="3" onclick="getPaging(this.id)" class="listing" >world</li>
+        <li id="4" onclick="getPaging(this.id)" class="listing" >hey everyone</li>
+        <li id="5" onclick="getPaging(this.id)" class="listing" >What's up</li>
+        <li id="6" onclick="getPaging(this.id)" class="listing" >welcome</li>
+        <li id="7" onclick="getPaging(this.id)" class="listing" >hello world</li>
+        <li id="8" onclick="getPaging(this.id)" class="listing" >thank you</li>
     </ul>
 </div>
 <script type="text/javascript">
