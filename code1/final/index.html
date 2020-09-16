@@ -111,7 +111,9 @@ let count2=0;
   if(!event.target.classList.contains('selected'))
     {
       event.target.classList.add('selected');
-count1=count1+1;
+      document.getElementById("input-select-text").value = arr1.toString()+",";
+      document.getElementById("input-select-text").value += document.getElementById(str).innerText+ ",";
+
     }
      
    
@@ -122,17 +124,11 @@ count1=count1+1;
     if (index !== -1) {
       arr1.splice(index, 1);
     }
-count2=count2+1;
+    document.getElementById("input-select-text").value = arr1.toString()+",";
+
   }
   
-  document.getElementById("input-select-text").value = arr1.toString()+",";
-
-
-  document.getElementById("input-select-text").value += document.getElementById(str).innerText+ ",";
-
   filterList("");
-
-
 }
 
 document.getElementById("input-select-text").addEventListener("keyup", function (e) {
