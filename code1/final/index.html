@@ -55,7 +55,7 @@
     }
 
     .listing.selected{
-        background-color: green;
+        background-color: orange;
     }
     .option-list li:hover{
         background-color: gray;
@@ -99,26 +99,39 @@
 
 //select option and add to the box
 function getPaging(str) {
+
+
+  var tester=(document.getElementById("input-select-text").value);
+  var arr1=tester.split(',');
+  arr1.pop();
+
+let count1=0;
+let count2=0;
+
   if(!event.target.classList.contains('selected'))
-            {
-                event.target.classList.add('selected');
-            }
+    {
+      event.target.classList.add('selected');
+count1=count1+1;
+    }
+     
+   
   else{
     event.target.classList.remove('selected');
     
-
-    return;
+    var index = arr1.indexOf(document.getElementById(str).innerText);
+    if (index !== -1) {
+      arr1.splice(index, 1);
+    }
+count2=count2+1;
   }
-
-  var tester=(document.getElementById("input-select-text").value);
-
-  var arr1=tester.split(',');
-  arr1.pop();
   
   document.getElementById("input-select-text").value = arr1.toString()+",";
-  document.getElementById("input-select-text").value += document.getElementById(str).innerText+ " ,";
+
+
+  document.getElementById("input-select-text").value += document.getElementById(str).innerText+ ",";
 
   filterList("");
+
 
 }
 
